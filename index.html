@@ -13,8 +13,11 @@
       crossorigin="anonymous"
     />
 
-<!-- bootstrap-icons: -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- bootstrap-icons: -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
     <!-- fluid = prend l'intégralité de la largeur dispo, Ceci est le bandeau de navigation -->
@@ -22,14 +25,26 @@
     <!-- NAVBAR à la place du header  -->
     <nav class="navbar navbar-expand-md bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"> <i class="bi bi-camera-reels-fill"></i> Cinéblog</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-camera-reels-fill"></i> Cinéblog</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Acceuil</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Acceuil</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Actuellement en salle</a>
@@ -38,7 +53,13 @@
               <a class="nav-link" href="#">Dernières critiques</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Archives
               </a>
               <ul class="dropdown-menu">
@@ -51,8 +72,6 @@
         </div>
       </div>
     </nav>
-    
-   
 
     <!-- ici pas de container-fluid = largeur limitée -->
     <div class="container p-2">
@@ -63,13 +82,14 @@
           <h1 class="text-center">Cinéblog - le blog des cinéphiles</h1>
         </div>
 
-        <div class=" col-12 col-md-2 order-1 order-md-0">  <!-- order-md-0 = dès qu'on dépasse 720px de width la colonne de gauche se repositionne en 1er et suis donc la règle col-md-2 -->
+        <div class="col-12 col-md-2 order-1 order-md-0">
+          <!-- order-md-0 = dès qu'on dépasse 720px de width la colonne de gauche se repositionne en 1er et suis donc la règle col-md-2 -->
           <!--colonne de gauche  -->
           colonne gauche
-         
-            <!-- Pour moi ça sert à rien on peut faire le titre h2 en col-12 directement -->
-            <h2 class="fs-4 text-primary link-primary">Actuellement en salle</h2>
-          
+
+          <!-- Pour moi ça sert à rien on peut faire le titre h2 en col-12 directement -->
+          <h2 class="fs-4 text-primary link-primary">Actuellement en salle</h2>
+
           <div class="col-12 mb-3">
             <img
               class="col-12"
@@ -86,92 +106,138 @@
           </div>
         </div>
 
-        <div class=" col-12 col-md-8 order-0">
+        <div class="col-12 col-md-8 order-0">
           <!--colonne centrale -->
           <div class="col-12 text-center">
             <!--Comme on est à l'interieur d'un élément on repart sur 12 parties de width dispo par rapport à l'espace occupé par l'élément parent.-->
-            <p class="lead" >Chers visiteurs bienvenue sur mon blog !</p>
+            <p class="lead">Chers visiteurs bienvenue sur mon blog !</p>
             <hr />
           </div>
 
-          <div class="col-12 ">
-            
-            <!-- 1er article ci-dessous :  -->
-            <div class="row shadow p-3 mb-5 bg-white rounded" >
-              <h2 class="col-12 text-decoration-underline ">Sortie de Top Gun: Maverick</h2>
-              <p class="col-12 small fst-italic" > <i class="bi bi-clock"></i> Par <span data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Developpeur web entousiaste en formation chez Visiplus Academy jusqu'en 2025">Michael Ntaban,</span> le 04 nov 2024</p>
-              <div class=" col-12 col-lg-6 order-1 order-md-0" > 
-                <!-- Le texte  prendra moitié de l'espace/ Photo prendra l'autre moitié -->
-                <p>
-                  Après avoir été l’un des meilleurs pilotes de chasse de la
-                  Marine américaine pendant plus de trente ans, Pete “Maverick"
-                  Mitchell continue à repousser ses limites en tant que pilote
-                  d'essai. Il refuse de monter en grade, car cela l’obligerait à
-                  renoncer à voler.
-                </p>
-                <p class="col-12 text-end"> <!--Donc le boutton est dans un 'p'...-->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Cliquez pour lire l'intégralité de l'article">Lire la suite...<i class="bi bi-book"></i></button>
-                    <button type="button" class="btn btn-success">Bande annonce <i class="bi bi-play-fill"></i></button>
-                </p>
-              </div>
-              <div class="col-12 col-lg-6 order-0"> <!--col-lg-6 = repositionne l'image à droite du texte dès qu'on dépasse 760px de width-->
-                <img class="img-fluid" src="/img/top-gun-maverick banner.webp" alt="img film" />
+          <div class="row">
+            <div class="col-12 col-md-6 col-xl-3 mb-3">
+              <!-- 1er article ci-dessous  avec le composant CARD bootstrap:  -->
+              <div class="card">
+                <img
+                  src="/img/top-gun-maverick banner.webp"
+                  class="card-img-top"
+                  alt="top gun"
+                />
+                <div class="card-body">
+                  <h2 class="card-title col-12 text-decoration-underline">
+                    Sortie de Top Gun: Maverick
+                  </h2>
+                  <p class="card-text col-12 small fst-italic">
+                    <i class="bi bi-clock"></i> Par
+                    <span
+                      data-bs-container="body"
+                      data-bs-toggle="popover"
+                      data-bs-placement="top"
+                      data-bs-content="Developpeur web entousiaste en formation chez Visiplus Academy jusqu'en 2025"
+                      >Michael Ntaban,</span
+                    >
+                    le 04 nov 2024
+                  </p>
+                  <p class="card-text">
+                    Après avoir été l’un des meilleurs pilotes de chasse de la
+                    Marine américaine pendant plus de trente ans, Pete
+                    “Maverick" Mitchell continue à repousser ses limites en tant
+                    que pilote d'essai. Il refuse de monter en grade, car cela
+                    l’obligerait à renoncer à voler.
+                  </p>
+                  <p class="col-12 text-end">
+                    <!--Donc le boutton est dans un 'p'...-->
+                    <button
+                      type="button"
+                      class="btn btn-primary mb-2"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="Cliquez pour lire l'intégralité de l'article"
+                    >
+                      Lire la suite...<i class="bi bi-book"></i>
+                    </button>
+                    <button type="button" class="btn btn-success mb-2">
+                      Bande annonce <i class="bi bi-play-fill"></i>
+                    </button>
+                  </p>
+                </div>
               </div>
             </div>
-              
-            <!-- 2eme article ci-dessous :  -->
-              <div class="row shadow p-3 mb-5 bg-white rounded">
-                  <h2 class="col-12 text-decoration-underline">Retour sur Inception</h2>
-                  <p class="col-12 small fst-italic"><i class="bi bi-clock"></i> Par Michael Ntaban, le 2 nov 2024</p>
-                  <div class="col-12 col-lg-6 order-1">  <!-- col-lg-6 = dès qu'on dépasse 960px de width le paragraph et les bouttons se repositionne à gauche et prennent la moitié de l'espace dispo  -->
-                    <!-- Article prendra moitié de l'espace/ Photo prendra l'autre moitié -->
-                    <p>
-                      Dom Cobb est un voleur expérimenté – le meilleur qui soit dans
-                      l’art périlleux de l’extraction : sa spécialité consiste à
-                      s’approprier les secrets les plus précieux d’un individu,
-                      enfouis au plus profond de son subconscient, pendant qu’il
-                      rêve et que son esprit est particulièrement vulnérable.
-                    </p>
-                    <p class="col-12 text-end"> <!--Donc le boutton est dans un 'p'...-->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Cliquez pour lire l'intégralité de l'article">Lire la suite... <i class="bi bi-book"></i></button>               
-                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalBouton"> Bande annonce <i class="bi bi-play-fill"></i></button>
-                <!-- Pour relier le bouton à la modal il faut indiquer l'id# de la modal (ici modalBouton) qui doit être le même que dans la modal importée en dessous à la fin de mon code html -->
-                        
-                    </p>
-                  </div>
-                 <div class="col-12 col-lg-6 order-0 order-md-1">  <!-- order-md-1 = dès qu'on dépasse 720px de width l'image se repositionne APRES le texte  -->
-                    <img class="img-fluid" src="/img/Inception bannière.webp" alt="img film" />
-                  </div>
-              </div>
-            </div>
-          
-        </div>
 
-        <div class=" col-12 col-md-2 mb-3 order-2">
-          <!--colonne de droite -->
-          colonne droite
-         
+              <!-- 2eme article ci-dessous :  -->
+              <div class="col-12 col-md-6 col-xl-3 mb-3">
+
+
+                <div class="card">
+                  <img
+                    src="/img/Inception bannière.webp"
+                    class="card-img-top"
+                    alt="top gun"
+                  />
+                  <div class="card-body">
+                    <h2 class="card-title col-12 text-decoration-underline">
+                      Retour sur Inception
+                    </h2>
+                    <p class="card-text col-12 small fst-italic">
+                      <i class="bi bi-clock"></i> Par
+                      <span
+                        data-bs-container="body"
+                        data-bs-toggle="popover"
+                        data-bs-placement="top"
+                        data-bs-content="Developpeur web entousiaste en formation chez Visiplus Academy jusqu'en 2025"
+                        >Michael Ntaban,</span
+                      >
+                      le 02 nov 2024
+                    </p>
+                    <p class="card-text">
+                      Dom Cobb est un voleur expérimenté – le meilleur qui soit
+                      dans l’art périlleux de l’extraction : sa spécialité
+                      consiste à s’approprier les secrets les plus précieux d’un
+                      individu, enfouis au plus profond de son subconscient,
+                      pendant qu’il rêve et que son esprit est particulièrement
+                      vulnérable.
+                    </p>
+                    <p class="col-12 text-end">
+                      <!--Donc le boutton est dans un 'p'...-->
+                      <button
+                        type="button"
+                        class="btn btn-primary mb-2"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        data-bs-title="Cliquez pour lire l'intégralité de l'article"
+                      >
+                        Lire la suite...<i class="bi bi-book"></i>
+                      </button>
+                      <button type="button" class="btn btn-success mb-2">
+                        Bande annonce <i class="bi bi-play-fill"></i>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-12 col-md-2 mb-3 order-2">
+            <!--colonne de droite -->
+            colonne droite
+
             <!-- Pour moi ça sert à rien on peut faire le titre h2 en col-12 directement -->
             <h2 class="fs-4 text-success link-primary">Dernières critiques</h2>
-          
-         
 
-              <img
-                class="img-fluid mb-3"
-                src="/img/inception_poster.webp"
-                alt="top gun"
-              />
-            
-            
-              <img
-                class="col-12 mb-3"
-                src="/img/despicable-me_poster.webp"
-                alt="Space Jam 2"
-              />
-      
-          
-        </div>
+            <img
+              class="img-fluid mb-3"
+              src="/img/inception_poster.webp"
+              alt="top gun"
+            />
 
+            <img
+              class="col-12 mb-3"
+              src="/img/despicable-me_poster.webp"
+              alt="Space Jam 2"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -180,25 +246,52 @@
       <p>Copyight Michael Ntaban - Site réalisé avec Bootstrap 5.3.3</p>
     </footer>
 
-    <!-- Modal :  ce code ne s'affiche pas sur la page--> <!-- donner un nom à l'id ci dessous, ici 'modalBouton' -->
-<div class="modal fade" id="modalBouton" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog  modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Bande annonce : Inception</h1> <!-- modal titre -->
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body"> <!-- modal body -->
-        ... <iframe width="100%" height="400" src="https://www.youtube.com/embed/HcoZbHBDHQA" title="INCEPTION - Bande Annonce Officielle (VF) - Leonardo DiCaprio / Christopher Nolan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>  <!--Ci-dessus rajouté width="100%" et régler la height pour être sur que la vidéo ne dépasse pas la modal -->
-      <div class="modal-footer"> 
-        <!-- je retire les boutons ci-dessous, pas besoin  -->
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <!-- Modal :  ce code ne s'affiche pas sur la page-->
+    <!-- donner un nom à l'id ci dessous, ici 'modalBouton' -->
+    <div
+      class="modal fade"
+      id="modalBouton"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Bande annonce : Inception
+            </h1>
+            <!-- modal titre -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- modal body -->
+            ...
+            <iframe
+              width="100%"
+              height="400"
+              src="https://www.youtube.com/embed/HcoZbHBDHQA"
+              title="INCEPTION - Bande Annonce Officielle (VF) - Leonardo DiCaprio / Christopher Nolan"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!--Ci-dessus rajouté width="100%" et régler la height pour être sur que la vidéo ne dépasse pas la modal -->
+          <div class="modal-footer">
+            <!-- je retire les boutons ci-dessous, pas besoin  -->
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- Ici JS BOOTSTRAP -->
     <script
@@ -206,14 +299,21 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    
-    <!-- initialiser le TOOLTIP et POPOVERS ( on peut mettre dans même balise 'script') -->
-  <script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
- </script>
 
+    <!-- initialiser le TOOLTIP et POPOVERS ( on peut mettre dans même balise 'script') -->
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+      );
+      const popoverList = [...popoverTriggerList].map(
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+      );
+    </script>
   </body>
 </html>
