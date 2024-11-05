@@ -12,10 +12,48 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+<!-- bootstrap-icons: -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
     <!-- fluid = prend l'intégralité de la largeur dispo, Ceci est le bandeau de navigation -->
-    <header class="container-fluid bg-dark text-white fs-2 p-2">Bandeau de navigation</header>
+    <!-- <header class="container-fluid bg-dark text-white fs-2 p-2">Bandeau de navigation</header> -->
+    <!-- NAVBAR à la place du header  -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <i class="bi bi-camera-reels-fill"></i> Cinéblog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Acceuil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Actuellement en salle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Dernières critiques</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Archives
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Bandes annonces</a></li>
+                <li><a class="dropdown-item" href="#">Réalisateurs</a></li>
+                <li><a class="dropdown-item" href="#">Acteurs </a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+   
+
     <!-- ici pas de container-fluid = largeur limitée -->
     <div class="container p-2">
       <!-- nouvelle ligne -->
@@ -25,7 +63,7 @@
           <h1 class="text-center">Cinéblog - le blog des cinéphiles</h1>
         </div>
 
-        <div class="col-2">
+        <div class=" col-12 col-md-2 order-1 order-md-0">  <!-- order-md-0 = dès qu'on dépasse 720px de width la colonne de gauche se repositionne en 1er et suis donc la règle col-md-2 -->
           <!--colonne de gauche  -->
           colonne gauche
          
@@ -48,7 +86,7 @@
           </div>
         </div>
 
-        <div class="col-8">
+        <div class=" col-12 col-md-8 order-0">
           <!--colonne centrale -->
           <div class="col-12 text-center">
             <!--Comme on est à l'interieur d'un élément on repart sur 12 parties de width dispo par rapport à l'espace occupé par l'élément parent.-->
@@ -61,8 +99,8 @@
             <!-- 1er article ci-dessous :  -->
             <div class="row shadow p-3 mb-5 bg-white rounded" >
               <h2 class="col-12 text-decoration-underline ">Sortie de Top Gun: Maverick</h2>
-              <p class="col-12 small fst-italic">Par Michael Ntaban, le 04 nov 2024</p>
-              <div class="col-6">
+              <p class="col-12 small fst-italic"> <i class="bi bi-clock"></i> Par Michael Ntaban, le 04 nov 2024</p>
+              <div class=" col-12 col-lg-6 order-1 order-md-0" > 
                 <!-- Le texte  prendra moitié de l'espace/ Photo prendra l'autre moitié -->
                 <p>
                   Après avoir été l’un des meilleurs pilotes de chasse de la
@@ -72,11 +110,11 @@
                   renoncer à voler.
                 </p>
                 <p class="col-12 text-end"> <!--Donc le boutton est dans un 'p'...-->
-                    <button type="button" class="btn btn-primary">Lire la suite...</button>
-                    <button type="button" class="btn btn-success">Bande annonce</button>
+                    <button type="button" class="btn btn-primary">Lire la suite...<i class="bi bi-book"></i></button>
+                    <button type="button" class="btn btn-success">Bande annonce <i class="bi bi-play-fill"></i></button>
                 </p>
               </div>
-              <div class="col-6">
+              <div class="col-12 col-lg-6 order-0"> <!--col-lg-6 = repositionne l'image à droite du texte dès qu'on dépasse 760px de width-->
                 <img class="img-fluid" src="/img/top-gun-maverick banner.webp" alt="img film" />
               </div>
             </div>
@@ -84,8 +122,8 @@
             <!-- 2eme article ci-dessous :  -->
               <div class="row shadow p-3 mb-5 bg-white rounded">
                   <h2 class="col-12 text-decoration-underline">Retour sur Inception</h2>
-                  <p class="col-12 small fst-italic">Par Michael Ntaban, le 2 nov 2024</p>
-                  <div class="col-6">
+                  <p class="col-12 small fst-italic"><i class="bi bi-clock"></i> Par Michael Ntaban, le 2 nov 2024</p>
+                  <div class="col-12 col-lg-6 order-1">  <!-- col-lg-6 = dès qu'on dépasse 960px de width le paragraph et les bouttons se repositionne à gauche et prennent la moitié de l'espace dispo  -->
                     <!-- Article prendra moitié de l'espace/ Photo prendra l'autre moitié -->
                     <p>
                       Dom Cobb est un voleur expérimenté – le meilleur qui soit dans
@@ -95,11 +133,11 @@
                       rêve et que son esprit est particulièrement vulnérable.
                     </p>
                     <p class="col-12 text-end"> <!--Donc le boutton est dans un 'p'...-->
-                        <button type="button" class="btn btn-primary">Lire la suite...</button>
-                        <button type="button" class="btn btn-success">Bande annonce</button>
+                        <button type="button" class="btn btn-primary">Lire la suite... <i class="bi bi-book"></i></button>
+                        <button type="button" class="btn btn-success">Bande annonce <i class="bi bi-play-fill"></i></button>
                     </p>
                   </div>
-                  <div class="col-6">
+                 <div class="col-12 col-lg-6 order-0 order-md-1">  <!-- order-md-1 = dès qu'on dépasse 720px de width l'image se repositionne APRES le texte  -->
                     <img class="img-fluid" src="/img/Inception bannière.webp" alt="img film" />
                   </div>
               </div>
@@ -107,7 +145,7 @@
           
         </div>
 
-        <div class="col-2 mb-3">
+        <div class=" col-12 col-md-2 mb-3 order-2">
           <!--colonne de droite -->
           colonne droite
          
