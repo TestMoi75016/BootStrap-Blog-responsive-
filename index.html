@@ -99,7 +99,7 @@
             <!-- 1er article ci-dessous :  -->
             <div class="row shadow p-3 mb-5 bg-white rounded" >
               <h2 class="col-12 text-decoration-underline ">Sortie de Top Gun: Maverick</h2>
-              <p class="col-12 small fst-italic"> <i class="bi bi-clock"></i> Par Michael Ntaban, le 04 nov 2024</p>
+              <p class="col-12 small fst-italic" > <i class="bi bi-clock"></i> Par <span data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Developpeur web entousiaste en formation chez Visiplus Academy jusqu'en 2025">Michael Ntaban,</span> le 04 nov 2024</p>
               <div class=" col-12 col-lg-6 order-1 order-md-0" > 
                 <!-- Le texte  prendra moitié de l'espace/ Photo prendra l'autre moitié -->
                 <p>
@@ -110,7 +110,7 @@
                   renoncer à voler.
                 </p>
                 <p class="col-12 text-end"> <!--Donc le boutton est dans un 'p'...-->
-                    <button type="button" class="btn btn-primary">Lire la suite...<i class="bi bi-book"></i></button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Cliquez pour lire l'intégralité de l'article">Lire la suite...<i class="bi bi-book"></i></button>
                     <button type="button" class="btn btn-success">Bande annonce <i class="bi bi-play-fill"></i></button>
                 </p>
               </div>
@@ -133,8 +133,10 @@
                       rêve et que son esprit est particulièrement vulnérable.
                     </p>
                     <p class="col-12 text-end"> <!--Donc le boutton est dans un 'p'...-->
-                        <button type="button" class="btn btn-primary">Lire la suite... <i class="bi bi-book"></i></button>
-                        <button type="button" class="btn btn-success">Bande annonce <i class="bi bi-play-fill"></i></button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Cliquez pour lire l'intégralité de l'article">Lire la suite... <i class="bi bi-book"></i></button>               
+                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalBouton"> Bande annonce <i class="bi bi-play-fill"></i></button>
+                <!-- Pour relier le bouton à la modal il faut indiquer l'id# de la modal (ici modalBouton) qui doit être le même que dans la modal importée en dessous à la fin de mon code html -->
+                        
                     </p>
                   </div>
                  <div class="col-12 col-lg-6 order-0 order-md-1">  <!-- order-md-1 = dès qu'on dépasse 720px de width l'image se repositionne APRES le texte  -->
@@ -178,11 +180,40 @@
       <p>Copyight Michael Ntaban - Site réalisé avec Bootstrap 5.3.3</p>
     </footer>
 
+    <!-- Modal :  ce code ne s'affiche pas sur la page--> <!-- donner un nom à l'id ci dessous, ici 'modalBouton' -->
+<div class="modal fade" id="modalBouton" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Bande annonce : Inception</h1> <!-- modal titre -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"> <!-- modal body -->
+        ... <iframe width="100%" height="400" src="https://www.youtube.com/embed/HcoZbHBDHQA" title="INCEPTION - Bande Annonce Officielle (VF) - Leonardo DiCaprio / Christopher Nolan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>  <!--Ci-dessus rajouté width="100%" et régler la height pour être sur que la vidéo ne dépasse pas la modal -->
+      <div class="modal-footer"> 
+        <!-- je retire les boutons ci-dessous, pas besoin  -->
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- Ici JS BOOTSTRAP -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    
+    <!-- initialiser le TOOLTIP et POPOVERS ( on peut mettre dans même balise 'script') -->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+ </script>
+
   </body>
 </html>
